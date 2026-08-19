@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 type SetPage = (page: string) => void
 
 export default function Footer({ setPage }: { setPage: SetPage }) {
@@ -9,14 +11,12 @@ export default function Footer({ setPage }: { setPage: SetPage }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#0A6EBD] to-[#0099A8] rounded-lg flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 11h2V9h2v2h2v2h-2v2h-2v-2H9v-2z" fill="white"/>
-                  <circle cx="12" cy="12" r="8" stroke="white" strokeWidth="1.5" fill="none" opacity="0.5"/>
-                </svg>
-              </div>
-              <span className="font-['DM_Serif_Display'] text-xl text-white">Telehealth</span>
+            <div className="mb-4 inline-flex bg-white rounded-xl px-4 py-3">
+              <img
+                src={logo}
+                alt="Dr247 — Your Health, Our Priority"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
               Connecting Australians with qualified doctors for convenient, secure online consultations.
@@ -108,7 +108,7 @@ export default function Footer({ setPage }: { setPage: SetPage }) {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500">
-            © 2026 Telehealth Australia Pty Ltd. All rights reserved.
+            © 2026 Dr247 Australia Pty Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from '../assets/logo.png'
 
 type Page = string
 
@@ -34,16 +35,11 @@ export default function Nav({ currentPage, setPage }: NavProps) {
             onClick={() => handleNav('home')}
             className="flex items-center gap-2 group"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-[#0A6EBD] to-[#0099A8] rounded-lg flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="white" opacity="0.3"/>
-                <path d="M9 11h2V9h2v2h2v2h-2v2h-2v-2H9v-2z" fill="white"/>
-                <circle cx="12" cy="12" r="8" stroke="white" strokeWidth="1.5" fill="none" opacity="0.5"/>
-              </svg>
-            </div>
-            <span className="font-['DM_Serif_Display'] text-xl text-[#0A6EBD]">
-              Telehealth
-            </span>
+            <img
+              src={logo}
+              alt="Dr247 — Your Health, Our Priority"
+              className="h-10 sm:h-11 w-auto transition-transform duration-200 group-hover:scale-105"
+            />
           </button>
 
           {/* Desktop nav */}
