@@ -144,3 +144,9 @@
 *.stl                filter=lfs diff=lfs merge=lfs -text
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
+
+# Site images are bundled by Vite at build time. Vercel does not fetch Git LFS
+# objects during checkout, so these must be stored as plain binary blobs or the
+# build ships the LFS pointer text instead of the image.
+src/assets/**.png    -filter -diff -merge binary
+public/**.png        -filter -diff -merge binary
